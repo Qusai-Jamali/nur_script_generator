@@ -1,0 +1,191 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #0d0b07;
+  color: #f0ebe0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(135deg, #6b4f0b, #c9a227);
+  border: none;
+  padding: 10px 12px;
+  color: #0d0b07;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: #14110b;
+  color: #f0ebe0;
+  border: 1px solid #3d331e;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid #3d331e;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.main {
+  padding: 24px;
+}
+
+.brand {
+  font-size: 28px;
+  letter-spacing: 6px;
+  color: #c9a227;
+}
+
+.divider {
+  border-top: 1px solid #3d331e;
+  margin: 8px 0;
+}
+
+.muted {
+  color: #9f937d;
+  font-size: 12px;
+}
+
+.chip {
+  border: 1px solid #5a4a27;
+  padding: 6px 8px;
+  width: fit-content;
+  color: #c9a227;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.centered-card {
+  width: 420px;
+  max-width: calc(100vw - 24px);
+  margin: 60px auto;
+  border: 1px solid #3d331e;
+  background: #100e09;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.tabs button.active {
+  outline: 1px solid #c9a227;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: #f27878;
+  margin-bottom: 10px;
+}
+
+.card {
+  border: 1px solid #3d331e;
+  padding: 16px;
+  background: #100e09;
+  margin-bottom: 12px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 16px;
+}
+
+.scene {
+  border-left: 2px solid #5a4a27;
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-row {
+  border: 1px solid #3d331e;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.card-row p {
+  margin: 4px 0 0;
+  color: #b4a792;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.plan-card {
+  border: 1px solid #3d331e;
+  padding: 16px;
+}
+
+.plan-card.popular {
+  border-color: #c9a227;
+}
+
+@media (max-width: 980px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #3d331e;
+  }
+
+  .two-col,
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+}
